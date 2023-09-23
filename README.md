@@ -16,3 +16,10 @@ The system have 3 layers VacationManagementSystem.Api, VacationManagementSystem.
 9. Admin can see all employees in the system
 10. Admin can add new employee from '/register' page by default the employee with role 'User'
 11. User can see his vacations and can request new vacation and pending for Admin approval
+
+### Technology used
+1. ASP.NET Core Web API
+2. Entity Framework Core
+3. LINQ
+4. JWT for security
+5. Angular (services, guards, etc.)
