@@ -1,0 +1,14 @@
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\bin\Debug\net7.0\VacationManagementSystem.Db.deps.json
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\bin\Debug\net7.0\VacationManagementSystem.Db.runtimeconfig.json
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\bin\Debug\net7.0\VacationManagementSystem.Db.dll
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\bin\Debug\net7.0\VacationManagementSystem.Db.pdb
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\obj\Debug\net7.0\VacationManagementSystem.Db.csproj.AssemblyReference.cache
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\obj\Debug\net7.0\VacationManagementSystem.Db.GeneratedMSBuildEditorConfig.editorconfig
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\obj\Debug\net7.0\VacationManagementSystem.Db.AssemblyInfoInputs.cache
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\obj\Debug\net7.0\VacationManagementSystem.Db.AssemblyInfo.cs
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\obj\Debug\net7.0\VacationManagementSystem.Db.csproj.CoreCompileInputs.cache
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\obj\Debug\net7.0\VacationManagementSystem.Db.dll
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\obj\Debug\net7.0\refint\VacationManagementSystem.Db.dll
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\obj\Debug\net7.0\VacationManagementSystem.Db.pdb
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\obj\Debug\net7.0\VacationManagementSystem.Db.genruntimeconfig.cache
+D:\Omar\Projects\VacationManagementSystem\VacationManagementSystem.Db\obj\Debug\net7.0\ref\VacationManagementSystem.Db.dll

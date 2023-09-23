@@ -1,0 +1,103 @@
+<nav class="navbar navbar-expand-lg navbar-dark static-top">
+  <div class="container navContainer fixedElement">
+    <ul class="container navbar-toggler text-black navContainer" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <li class="nav-item dropdown" style="list-style-type:none">
+        <a class="nav-link dropdown-toggle">
+          Actions
+        </a>
+      </li>
+    </ul>
+    <div class="container collapse navbar-collapse row" id="navbarSupportedContent">
+      <ul class="navbar-nav ulStyle" style="flex-wrap: inherit;">
+        <li class="nav-item">
+          <a class="nav-link secondaryNavLink ms-3" (click)="submitForm()">
+            <img src="assets/icons/save.svg" height="25" />Save
+          </a>
+          <span class="nav-item LineSpan">|</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="p-3 my-5">
+  <div class="container-fluid">
+    <h1 class="h3 py-2" style="font-size: 20px; font-weight: 400;">New Vacation Request</h1>
+    <form [formGroup]="requestVacationForm">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-title">
+              Vacation
+              <hr />
+            </div>
+            <div class="card-body mt-2">
+              <div class="container">
+                <div class="row ContactFormResponsive">
+                  <div class="d-flex justify-content-between col-md-12 customDivInputs">
+                    <label for="startDate" class="form-label required">Start Date</label>
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex col-md-12" style="flex-direction:column">
+                        <input type="date" formControlName="startDate" class="form-control">
+                        <span class="text-danger"
+                          *ngIf="requestVacationForm.controls?.['startDate']?.errors != null && requestVacationForm.controls?.['startDate']?.touched">
+                          <span class="small" *ngIf="requestVacationForm.controls?.['startDate']?.errors?.['required']">
+                            Start date is required
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mt-2 col-md-12 customDivInputs">
+                    <label for="endDate" class="form-label required">End Date</label>
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex col-md-12" style="flex-direction:column">
+                        <input type="date" formControlName="endDate" class="form-control">
+                        <span class="text-danger"
+                          *ngIf="requestVacationForm.controls?.['endDate']?.errors != null && requestVacationForm.controls?.['endDate']?.touched">
+                          <span class="small" *ngIf="requestVacationForm.controls?.['endDate']?.errors?.['required']">
+                            End date is required
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mt-2 col-md-12 customDivInputs">
+                    <label for="type" class="form-label required">Vacation Type</label>
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex col-md-12" style="flex-direction:column">
+                        <select class="form-select" formControlName="type">
+                          <option value="annual">Annual</option>
+                          <option value="sick">Sick</option>
+                        </select>
+                        <span class="text-danger"
+                          *ngIf="requestVacationForm.controls?.['type']?.errors != null && requestVacationForm.controls?.['type']?.touched">
+                          <span class="small" *ngIf="requestVacationForm.controls?.['type']?.errors?.['required']">
+                            Type is required
+                          </span>
+                          <span class="small" *ngIf="requestVacationForm.controls?.['type']?.errors?.['pattern']">
+                            Type must be annual or sick
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mt-2 col-md-12 customDivInputs">
+                    <label for="reason" class="form-label">Reason (optional)</label>
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex col-md-12" style="flex-direction:column">
+                        <textarea formControlName="reason" class="form-control"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

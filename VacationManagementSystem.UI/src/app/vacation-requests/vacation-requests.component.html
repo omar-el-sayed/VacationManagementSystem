@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark static-top">
+  <div class="container navContainer fixedElement">
+    <ul class="container navbar-toggler text-black navContainer" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <li class="nav-item dropdown" style="list-style-type:none">
+        <a class="nav-link dropdown-toggle">
+          Actions
+        </a>
+      </li>
+    </ul>
+    <div class="container collapse navbar-collapse row" id="navbarSupportedContent">
+      <ul class="navbar-nav ulStyle" style="flex-wrap: inherit;">
+        <li class="nav-item" *ngIf="!isAdmin">
+          <a class="nav-link secondaryNavLink ms-3" routerLink="/request-vacation">
+            <img src="assets/icons/add.svg" height="25" />New
+          </a>
+          <span class="nav-item LineSpan">|</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="my-5 p-4">
+  <div class="container-fluid">
+    <h1 class="h3 py-2" style="font-size: 20px; font-weight: 400;">All Vacations</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="smart-table">
+          <ng2-smart-table [settings]="settings" [source]="data" (custom)="onCustomAction($event)">
+          </ng2-smart-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

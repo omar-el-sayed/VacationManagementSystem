@@ -1,0 +1,62 @@
+<div class="container py-3">
+  <div class="row">
+    <h3 style="font-size: 25px;">Dashboard</h3>
+    <div class="col-md-12 mt-3">
+      <div>
+        <div class="row justify-content-center" *ngIf="isAdmin">
+          <div class="col-md-3 my-3">
+            <div class="card-counter black">
+              <img src="assets/images/dashboard/projectIc2.png" />
+              <span class="count-name">Total Employees</span>
+              <span class="count-numbers">{{dashboardModel.employeesCount}}</span>
+            </div>
+          </div>
+          <div class="col-md-3 my-3">
+            <div class="card-counter black">
+              <img src="assets/images/dashboard/projectIc2.png" />
+              <span class="count-name">Total Departments</span>
+              <span class="count-numbers">{{dashboardModel.departmentsCount}}</span>
+            </div>
+          </div>
+          <div class="col-md-3 my-3">
+            <div class="card-counter black">
+              <img src="assets/images/dashboard/projectIc2.png" />
+              <span class="count-name">Total Vacation requests</span>
+              <span class="count-numbers">{{dashboardModel.vacationRequestsCount}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center" *ngIf="!isAdmin">
+          <div class="col-md-3 my-3">
+            <div class="card-counter black">
+              <img src="assets/images/dashboard/projectIc2.png" />
+              <span class="count-name">Total Balance</span>
+              <span class="count-numbers">{{employeesDashboardModel.totalBalanceCount}} days</span>
+            </div>
+          </div>
+          <div class="col-md-3 my-3">
+            <div class="card-counter black">
+              <img src="assets/images/dashboard/projectIc2.png" />
+              <span class="count-name">Used Vacation</span>
+              <span class="count-numbers">{{employeesDashboardModel.usedBalanceCount}} days</span>
+            </div>
+          </div>
+          <div class="col-md-3 my-3">
+            <div class="card-counter black">
+              <img src="assets/images/dashboard/projectIc2.png" />
+              <span class="count-name">Remained Vacation</span>
+              <span class="count-numbers">{{employeesDashboardModel.remainedVacationCount}} days</span>
+            </div>
+          </div>
+          <div class="col-md-3 my-3">
+            <div class="card-counter black">
+              <img src="assets/images/dashboard/projectIc2.png" />
+              <span class="count-name">Pending Vacation Requests</span>
+              <span class="count-numbers">{{employeesDashboardModel.pendingVacationRequestsCount}} requests</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\VacationManagementSystem.Api.props" />
+</Project>

@@ -1,0 +1,114 @@
+<div class="main">
+  <section class="signup">
+    <div class="container">
+      <div class="signup-content">
+        <div class="signup-form">
+          <h2 class="form-title">Sign up</h2>
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)" class="register-form" id="register-form">
+            <div class="form-group">
+              <label><i class="zmdi zmdi-account material-icons-name"></i></label>
+              <input type="text" formControlName="firstName" placeholder="First Name" />
+              <span class="text-danger"
+                *ngIf="registerForm.controls?.['firstName']?.errors != null && registerForm.controls?.['firstName']?.touched">
+                <span class="small" *ngIf="registerForm.controls?.['firstName']?.errors?.['required']">
+                  First Name is required
+                </span>
+                <span class="small" *ngIf="registerForm.controls?.['firstName']?.errors?.['maxlength']">
+                  Max Length is 50
+                </span>
+              </span>
+            </div>
+            <div class="form-group">
+              <label><i class="zmdi zmdi-account material-icons-name"></i></label>
+              <input type="text" formControlName="lastName" placeholder="Last Name" />
+              <span class="text-danger"
+                *ngIf="registerForm.controls?.['lastName']?.errors != null && registerForm.controls?.['lastName']?.touched">
+                <span class="small" *ngIf="registerForm.controls?.['lastName']?.errors?.['required']">
+                  Last Name is required
+                </span>
+                <span class="small" *ngIf="registerForm.controls?.['lastName']?.errors?.['maxlength']">
+                  Max Length is 50
+                </span>
+              </span>
+            </div>
+            <div class="form-group">
+              <label><i class="zmdi zmdi-email"></i></label>
+              <input type="email" formControlName="email" placeholder="Email" />
+              <span class="text-danger"
+                *ngIf="registerForm.controls?.['email']?.errors != null && registerForm.controls?.['email']?.touched">
+                <span class="small" *ngIf="registerForm.controls?.['email']?.errors?.['required']">
+                  Email is required
+                </span>
+                <span class="small" *ngIf="registerForm.controls?.['email']?.errors?.['email']">
+                  Invalid email
+                </span>
+                <span class="small" *ngIf="registerForm.controls?.['email']?.errors?.['maxlength']">
+                  Max Length is 128
+                </span>
+              </span>
+            </div>
+            <div class="form-group">
+              <label><i class="zmdi zmdi-lock"></i></label>
+              <input type="password" formControlName="password" placeholder="Password" />
+              <span class="text-danger"
+                *ngIf="registerForm.controls?.['password']?.errors != null && registerForm.controls?.['password']?.touched">
+                <span class="small" *ngIf="registerForm.controls?.['password']?.errors?.['required']">
+                  Password is required
+                </span>
+                <span class="small" *ngIf="registerForm.controls?.['password']?.errors?.['maxlength']">
+                  Max Length is 256
+                </span>
+              </span>
+            </div>
+            <div class="form-group">
+              <label><i class="zmdi zmdi-email"></i></label>
+              <input type="text" formControlName="address" placeholder="Address" />
+            </div>
+            <div class="form-group">
+              <label><i class="zmdi zmdi-email"></i></label>
+              <input type="number" formControlName="salary" placeholder="Salary" />
+              <span class="text-danger"
+                *ngIf="registerForm.controls?.['salary']?.errors != null && registerForm.controls?.['salary']?.touched">
+                <span class="small" *ngIf="registerForm.controls?.['salary']?.errors?.['required']">
+                  Salary is required
+                </span>
+              </span>
+            </div>
+            <div class="form-group">
+              <label><i class="zmdi zmdi-email"></i></label>
+              <input type="number" formControlName="balance" placeholder="Vacation Balance" />
+              <span class="text-danger"
+                *ngIf="registerForm.controls?.['balance']?.errors != null && registerForm.controls?.['balance']?.touched">
+                <span class="small" *ngIf="registerForm.controls?.['balance']?.errors?.['required']">
+                  Balance is required
+                </span>
+              </span>
+            </div>
+            <div class="form-group">
+              <label><i class="zmdi zmdi-email"></i></label>
+              <input type="date" formControlName="birthDate" placeholder="Birthdate" />
+            </div>
+            <div class="form-group">
+              <label><i class="zmdi zmdi-email"></i></label>
+              <input type="date" formControlName="hireDate" placeholder="Hiredate" />
+            </div>
+            <div class="form-group">
+              <label><i class="zmdi zmdi-email"></i></label>
+              <select class="form-select" formControlName="departmentId">
+                <option value="-1">Choose Department</option>
+                <option [value]="department.id" *ngFor="let department of departments">{{department.name}}</option>
+              </select>
+            </div>
+            <div class="form-group form-button">
+              <input type="submit" class="form-submit" value="Register" />
+            </div>
+          </form>
+        </div>
+        <div class="signup-image">
+          <figure><img src="assets/images/signup-image.jpg" alt="sing up image"></figure>
+          <a routerLink="/login" class="signup-image-link">I am already member</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

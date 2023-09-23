@@ -1,0 +1,73 @@
+<div *ngIf="hasNavBar" [ngClass]="isActive?'zeroWidth':''" class="nav-container" style="overflow-y:scroll">
+  <nav id="sidebar" [ngClass]="isActive?'active':''" *ngIf="showNavBar" class="parentForLogout">
+    <div class="sidebar-header pb-0">
+      <h3 class="crm-nav-title" *ngIf="!isActive">
+        <a routerLink="/admin">Admin Panel</a>
+      </h3>
+      <h3 class="crm-nav-title" style="text-align:right;" *ngIf="isActive">
+        <a routerLink="/admin">MS</a>
+      </h3>
+    </div>
+    <ul class="list-unstyled components">
+      <li [ngClass]="activeLi=='/dashboard'? isActive?'active close-SideBar':'active': isActive?'close-SideBar':''"
+        *ngIf="isAuthenticated">
+        <a style="font-size: 12px" (click)="toggleLI('/dashboard')">
+          <span data-gloss="Dashboard" [ngClass]="isActive?'tags':''"></span>
+          <img src="assets/icons/speedometer.svg" /> <span *ngIf="!isActive">Dashboard</span>
+        </a>
+      </li>
+      <li [ngClass]="activeLi=='/vacations'?isActive?'active close-SideBar':'active': isActive?'close-SideBar':''"
+        *ngIf="isAuthenticated">
+        <a style="font-size: 12px" (click)="toggleLI('/vacations')">
+          <span data-gloss="Vacations" [ngClass]="isActive?'tags':''"></span>
+          <img src="assets/icons/basket.svg" /> <span *ngIf="!isActive">Vacations</span>
+        </a>
+      </li>
+      <li [ngClass]="activeLi=='/employees'? isActive?'active close-SideBar':'active': isActive?'close-SideBar':''"
+        *ngIf="isAdmin">
+        <a style="font-size: 12px" (click)="toggleLI('/employees')">
+          <span data-gloss="Employees" [ngClass]="isActive?'tags':''"></span>
+          <img src="assets/icons/people.svg" /> <span *ngIf="!isActive">Employees</span>
+        </a>
+      </li>
+      <li [ngClass]="activeLi=='/roles'? isActive?'active close-SideBar':'active': isActive?'close-SideBar':''"
+        *ngIf="isAdmin">
+        <a style="font-size: 12px" (click)="toggleLI('/roles')">
+          <span data-gloss="Roles" [ngClass]="isActive?'tags':''"></span>
+          <img src="assets/icons/speedometer2.svg" /> <span *ngIf="!isActive">Roles</span>
+        </a>
+      </li>
+      <li [ngClass]="activeLi=='/register'?isActive?'active close-SideBar':'active': isActive?'close-SideBar':''"
+        *ngIf="!isAuthenticated">
+        <a style="font-size: 12px" (click)="toggleLI('/register')">
+          <span data-gloss="Register" [ngClass]="isActive?'tags':''"></span>
+          <img src="assets/icons/hourglass-split.svg" /> <span *ngIf="!isActive">Register</span>
+        </a>
+      </li>
+      <li [ngClass]="activeLi=='/login'?isActive?'active close-SideBar':'active': isActive?'close-SideBar':''"
+        *ngIf="!isAuthenticated">
+        <a style="font-size: 12px" (click)="toggleLI('/login')">
+          <span data-gloss="Login" [ngClass]="isActive?'tags':''"></span>
+          <img src="assets/icons/people.svg" /> <span *ngIf="!isActive">Login</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="list-unstyled CTAs" [attr.style]="isActive? '':'width: 220px;position:absolute'" [class.pt-5]="isActive">
+      <li (click)="logout()"
+        [ngClass]="activeLi=='/'?isActive?'active close-SideBar':'active': isActive?'close-SideBar':''">
+        <a style="font-size:12px">
+          <span data-gloss="Logout" [ngClass]="isActive?'tags':''"></span>
+          <img src="assets/icons/logout.SVG" /><span *ngIf="!isActive"> Logout </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <button type="button" id="sidebarCollapse" (click)="toggleBar()" [ngClass]="isActive?'sideBarToggled':''"
+    class="btn input-button">
+    <i class="fas fa-align-left"></i>
+    <span *ngIf="!isActive">
+      <img src="assets/icons/ArrowRight.SVG" />
+    </span>
+    <span *ngIf="isActive"><img src="assets/icons/ArrowLeft.SVG" /></span>
+  </button>
+</div>

@@ -1,0 +1,103 @@
+<nav class="navbar navbar-expand-lg navbar-dark static-top">
+  <div class="container navContainer fixedElement">
+    <ul class="container navbar-toggler text-black navContainer" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <li class="nav-item dropdown" style="list-style-type:none">
+        <a class="nav-link dropdown-toggle">
+          Actions
+        </a>
+      </li>
+    </ul>
+    <div class="container collapse navbar-collapse row" id="navbarSupportedContent">
+      <ul class="navbar-nav ulStyle" style="flex-wrap: inherit;">
+        <li class="nav-item">
+          <a class="nav-link secondaryNavLink ms-3" (click)="submitForm()">
+            <img src="assets/icons/save.svg" height="25" />Save
+          </a>
+          <span class="nav-item LineSpan">|</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="p-3 my-5">
+  <div class="container-fluid">
+    <h1 class="h3 py-2" style="font-size: 20px; font-weight: 400;">New Vacation Request</h1>
+    <form [formGroup]="updateEmployeeForm">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-title">
+              Vacation
+              <hr />
+            </div>
+            <div class="card-body mt-2">
+              <div class="container">
+                <div class="row ContactFormResponsive">
+                  <div class="d-flex justify-content-between col-md-12 customDivInputs">
+                    <label for="firstName" class="form-label required">First Name</label>
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex col-md-12" style="flex-direction:column">
+                        <input type="text" formControlName="firstName" readonly class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mt-2 col-md-12 customDivInputs">
+                    <label for="lastName" class="form-label required">Last Name</label>
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex col-md-12" style="flex-direction:column">
+                        <input type="text" formControlName="lastName" readonly class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mt-2 col-md-12 customDivInputs">
+                    <label for="address" class="form-label required">Address</label>
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex col-md-12" style="flex-direction:column">
+                        <input type="text" formControlName="address" readonly class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mt-2 col-md-12 customDivInputs">
+                    <label for="salary" class="form-label required">Salary</label>
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex col-md-12" style="flex-direction:column">
+                        <input type="number" formControlName="salary" readonly class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mt-2 col-md-12 customDivInputs">
+                    <label for="birthDate" class="form-label required">Birthdate</label>
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex col-md-12" style="flex-direction:column">
+                        <input type="datetime" formControlName="birthDate" readonly class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mt-2 col-md-12 customDivInputs">
+                    <label for="hireDate" class="form-label required">Hiredate</label>
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex col-md-12" style="flex-direction:column">
+                        <input type="datetime" formControlName="hireDate" readonly class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between mt-2 col-md-12 customDivInputs">
+                    <label for="balance" class="form-label required">Balance</label>
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex col-md-12" style="flex-direction:column">
+                        <input type="number" formControlName="balance" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
