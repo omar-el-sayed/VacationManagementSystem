@@ -2,7 +2,7 @@
 The Vacation Management System is a web application that allows employees to request vacations and manages vacation balances. The system have three layers: a database, an API, and a front-end interface.
 
 ### Before Start
-The system have 3 layers VacationManagementSystem.Api, VacationManagementSystem.Db, VacationManagementSystem.UI (Angular)
+The system has 3 layers VacationManagementSystem.Api, VacationManagementSystem.Db, VacationManagementSystem.UI (Angular)
 
 #### Getting Start
 1. Clone the repo
